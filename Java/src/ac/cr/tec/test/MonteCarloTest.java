@@ -81,6 +81,23 @@ class MonteCarloTest {
         Assertions.assertTrue(randomResult<=max);
         Assertions.assertTrue(randomResult>=min);
     }
+    @Test
+    public void MonteCarloTest(){
+        double pi=Math.PI;
+        double calculatedPI;
+        double diff;
+        int iterations=100;
+        double allowedMistake=0.00999999;
+
+        while (iterations>0){
+            iterations--;
+            calculatedPI=MontecarloMethod.computePI();
+            System.out.println(calculatedPI);
+            diff=Math.abs(calculatedPI-pi);
+            Assertions.assertTrue(diff<=allowedMistake);
+        }
+    }
+
 
 
 }

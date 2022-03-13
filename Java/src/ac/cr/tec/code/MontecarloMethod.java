@@ -1,7 +1,7 @@
 package ac.cr.tec.code;
 
 public class MontecarloMethod {
-    private static final int iterations=100000000;
+    private static final int iterations=10000000;
     private static final int radius=10;
     public static double computePI(){
         int withinCircle=0;
