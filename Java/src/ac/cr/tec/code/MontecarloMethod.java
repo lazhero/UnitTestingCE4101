@@ -1,7 +1,7 @@
 package ac.cr.tec.code;
 
 public class MontecarloMethod {
-    private static final int iterations=100000;
+    private static final int iterations=100000000;
     private static final int radius=10;
     public static double computePI(){
         int withinCircle=0;
@@ -19,11 +19,10 @@ public class MontecarloMethod {
             iterations--;
 
         }
-        return 4*(withinCircle/withinSquare);
-
+        return 4*((double)withinCircle/withinSquare);
 
     }
-    private static double distance(double X,double Y){
+    public static double distance(double X,double Y){
         return Math.sqrt(Math.pow(X,2)+Math.pow(Y,2));
     }
 }
