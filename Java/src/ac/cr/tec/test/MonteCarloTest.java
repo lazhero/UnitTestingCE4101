@@ -44,4 +44,43 @@ class MonteCarloTest {
         Assertions.assertEquals(h, MontecarloMethod.distance(a,b));
     }
 
+    @Test
+    public void randomTest(){
+        int min;
+        int max;
+        double randomResult;
+
+        min=-2;
+        max=13;
+        randomResult= Random.random(min,max);
+        Assertions.assertTrue(randomResult<=max);
+        Assertions.assertTrue(randomResult>=min);
+
+
+        min=0;
+        max=30;
+        randomResult= Random.random(min,max);
+        Assertions.assertTrue(randomResult<=max);
+        Assertions.assertTrue(randomResult>=min);
+
+        min=-13;
+        max=-5;
+        randomResult= Random.random(min,max);
+        Assertions.assertTrue(randomResult<=max);
+        Assertions.assertTrue(randomResult>=min);
+
+        min=40;
+        max=50;
+        randomResult= Random.random(min,max);
+        Assertions.assertTrue(randomResult<=max);
+        Assertions.assertTrue(randomResult>=min);
+
+        min=-10;
+        max=0;
+        randomResult= Random.random(min,max);
+        Assertions.assertTrue(randomResult<=max);
+        Assertions.assertTrue(randomResult>=min);
+    }
+
+
 }
