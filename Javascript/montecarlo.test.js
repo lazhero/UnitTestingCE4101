@@ -115,3 +115,27 @@ function randomTest(){
     });
    
 }
+
+ 
+function MontecarloTest(){
+    const pi=Math.PI;
+    var calculatedPi;
+    const iterations=5;
+    const allowedDiff=0.00999999;
+    var diff;
+    for (let index = 0; index < iterations; index++) {
+        calculatedPi=Montecarlo();
+        diff=Math.abs(calculatedPi-pi);
+        test("Montecarlo",()=>{
+            expect(diff).toBeLessThanOrEqual(allowedDiff);
+        }
+        );
+ 
+ 
+       
+    }
+}
+distanceTest();
+randomTest();
+MontecarloTest();
+
