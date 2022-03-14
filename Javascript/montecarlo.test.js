@@ -47,3 +47,71 @@ function distanceTest(){
     });
    
 }
+
+function randomTest(){
+    var min;
+    var max;
+    var randomValue;
+ 
+ 
+    min=-10;
+    max=10;
+    randomValue=random(min,max);
+    test("min=-10, max=10",()=>{
+        expect(randomValue).toBeGreaterThanOrEqual(min);
+        expect(randomValue).toBeLessThanOrEqual(max);
+ 
+    });
+ 
+ 
+    min=-2;
+    max=13;
+    randomValue=random(min,max);
+    test("min=-2, max=13",()=>{
+        expect(randomValue).toBeGreaterThanOrEqual(min);
+        expect(randomValue).toBeLessThanOrEqual(max);
+ 
+    });
+ 
+ 
+ 
+    min=0;
+    max=30;
+    randomValue=random(min,max);
+    test("min=0, max=30",()=>{
+        expect(randomValue).toBeGreaterThanOrEqual(min);
+        expect(randomValue).toBeLessThanOrEqual(max);
+ 
+    });
+ 
+ 
+    min=-13;
+    max=-5;
+    randomValue=random(min,max);
+    test("min=-13, max=-5",()=>{
+        expect(randomValue).toBeGreaterThanOrEqual(min);
+        expect(randomValue).toBeLessThanOrEqual(max);
+ 
+    });
+ 
+ 
+    min=40;
+    max=50;
+    randomValue=random(min,max);
+    test("min=40, max=50",()=>{
+        expect(randomValue).toBeGreaterThanOrEqual(min);
+        expect(randomValue).toBeLessThanOrEqual(max);
+ 
+    });
+ 
+ 
+    min=-10;
+    max=0;
+    randomValue=random(min,max);
+    test("min=-10, max=0",()=>{
+        expect(randomValue).toBeGreaterThanOrEqual(min);
+        expect(randomValue).toBeLessThanOrEqual(max);
+ 
+    });
+   
+}
