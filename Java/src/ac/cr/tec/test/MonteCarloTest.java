@@ -92,7 +92,6 @@ class MonteCarloTest {
         while (iterations>0){
             iterations--;
             calculatedPI=MontecarloMethod.computePI();
-            System.out.println(calculatedPI);
             diff=Math.abs(calculatedPI-pi);
             Assertions.assertTrue(diff<=allowedMistake);
         }
